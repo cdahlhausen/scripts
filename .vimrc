@@ -21,9 +21,6 @@ set tabstop=2 softtabstop=4 shiftwidth=2 expandtab number ruler term=builtin_ans
 colorscheme koehler
 set nocompatible
 filetype plugin indent on
-set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
-highlight OverLength ctermbg=yellow ctermfg=red guibg=#592929
-match OverLength /\%81v.\+/
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
