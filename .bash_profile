@@ -56,3 +56,4 @@ alias showBlocked='sudo ipfw list'                  # showBlocked:  All ipfw rul
 alias lock='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend'
 
 
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
