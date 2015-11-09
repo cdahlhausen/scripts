@@ -1,6 +1,8 @@
 alias ll='ls -alg'
 alias ppm='cd ~/work/pp'
 alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
 alias mn='cd ~/work/pp'
 alias rmdockim="docker images | grep none | awk {'print $3'} | xargs docker rmi"
 
