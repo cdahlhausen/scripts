@@ -2,15 +2,31 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-" " alternatively, pass a path where Vundle should install bundles
-" "let path = '~/some/path/here'
-" "call vundle#rc(path)
-"
-" " let Vundle manage Vundle, required
-" Bundle 'gmarik/vundle'
-"
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+" plugin on GitHub repo
+Plugin 'tpope/vim-fugitive'
+" plugin from http://vim-scripts.org/vim/scripts.html
+Plugin 'L9'
+" Git plugin not hosted on GitHub
+Plugin 'git://git.wincent.com/command-t.git'
+" git repos on your local machine (i.e. when working on your own plugin)
+Plugin 'file:///home/gmarik/path/to/plugin'
+" The sparkup vim script is in a subdirectory of this repo called vim.
+" Pass the path to set the runtimepath properly.
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+" Install L9 and avoid a Naming conflict if you've already installed a
+" different version somewhere else.
+Plugin 'ascenator/L9', {'name': 'newL9'}
+
 " " Keep bundle commands between here and filetype plugin indent on.
 " " For Ansible formatting
 Bundle 'chase/vim-ansible-yaml'
@@ -21,6 +37,13 @@ Bundle 'tpope/vim-surround'
 " Bundle 'mattn/emmet-vim'
 " " For Chef script formatting
 " Bundle 't9md/vim-chef'
+
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+
+
+
 "
 filetype plugin indent on     " required
 "
@@ -104,4 +127,3 @@ fun! <SID>StripTrailingWhitespaces()
 endfun
 
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
-
